@@ -4,11 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BAGJA COLLEGE</title>
+	<link rel="icon" href="logo_bc.png" type="image/gif" sizes="16x16">
 	<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 		*{
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
+			font-family: "Poppins", sans-serif;
 		}
 		body{
 			background: #fff;
@@ -29,6 +32,23 @@
 		.box{
 			display: flex;
 			gap: 20px;
+		}
+		.logo{
+			position: fixed;
+			top: 5px;
+			left: 5px;
+			display: flex;
+			justify-content: center;
+			height: 40px;
+			align-items: center;
+		}
+		.logo img{
+			width: 30px;
+			height: 30px;
+		}
+		.logo p{
+			padding: 5px;
+			font-weight: 900;
 		}
 		
 
@@ -52,12 +72,15 @@ a.button {
   color: var(--button-color);
   font-size: 14px;
   cursor: pointer;
+  transition: .2s all;
 }
 
 a.button:active {
   filter: brightness(75%);
 }
-
+a.button:hover{
+	transform: scale(1.1);
+}
 .dropdown {
   position: relative;
   padding: 0;
@@ -89,14 +112,13 @@ a.button:active {
 
 .dropdown ul {
   position: absolute;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 20px 0;
   width: var(--dropdown-width);
   left: 50%;
   margin-left: calc((var(--dropdown-width) / 2)  * -1);
   box-sizing: border-box;
   z-index: 2;
-  
   background: var(--dropdown-background);
   border-radius: 6px;
   list-style: none;
@@ -160,38 +182,57 @@ a.button:active {
 	</style>
 </head>
 <body>
-	<div class="header"><hi>WELCOME TO BAGJA COLLAGE</hi></div>
-	<div class="box">
-	<details class="dropdown">
-    <summary role="button">
-      <a class="button">Kelas X</a>
-    </summary>
-    <ul>
-      <li><a href="https://forms.gle/PTQGbSwSJqUUaNNH6">X FK UI</a></li>
-      <li><a href="#">X FK UGM</a></li>
-  </ul>
-</details>
-<details class="dropdown">
-    <summary role="button">
-      <a class="button">Kelas XI</a>
-    </summary>
-    <ul>
-      <li><a href="#">XI FAKULTAS TEKNIK</a></li>
-      <li><a href="#">XI FAKULTAS ILMU KESEHATAN</a></li>
-      <li><a href="#">XI FAKULTAS SOSHUM</a></li>
-      <li><a href="#">XI IKATAN DINAS</a></li>
-  </ul>
-</details>
-<details class="dropdown">
-    <summary role="button">
-      <a class="button">Kelas XII</a>
-    </summary>
-    <ul>
-      <li><a href="#">XII FAKULTAS TEKNIK DAN ILMU KESEHATAN</a></li>
-      <li><a href="#">XII FAKULTAS SOSHUM</a></li>
-      <li><a href="#">XII IKATAN DINAS</a></li>
-  </ul>
-</details>
+	<div class="header">
+		
+		<hi id="typing">WELCOME TO BAGJA COLLAGE TEST</hi>
 	</div>
+	<div class="box">
+		<details class="dropdown">
+		    <summary role="button">
+		      <a class="button">Kelas X</a>
+		    </summary>
+		    <ul>
+		      <li><a href="https://forms.gle/PTQGbSwSJqUUaNNH6">X FK UI</a></li>
+		      <li><a href="#">X FK UGM</a></li>
+		  </ul>
+		</details>
+		<details class="dropdown">
+		    <summary role="button">
+		      <a class="button">Kelas XI</a>
+		    </summary>
+		    <ul>
+		      <li><a href="#">XI FAKULTAS TEKNIK</a></li>
+		      <li><a href="#">XI FAKULTAS ILMU KESEHATAN</a></li>
+		      <li><a href="#">XI FAKULTAS SOSHUM</a></li>
+		      <li><a href="#">XI IKATAN DINAS</a></li>
+		  </ul>
+		</details>
+		<details class="dropdown">
+		    <summary role="button">
+		      <a class="button">Kelas XII</a>
+		    </summary>
+		    <ul>
+		      <li><a href="#">XII FAKULTAS TEKNIK DAN ILMU KESEHATAN</a></li>
+		      <li><a href="#">XII FAKULTAS SOSHUM</a></li>
+		      <li><a href="#">XII IKATAN DINAS</a></li>
+		  </ul>
+		</details>
+	</div>
+	<div class="logo">
+		<img src="logo_bc.png">
+		<p>Bagja College</p>
+	</div>
+
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+	<script>
+    var typed = new Typed('#typing', {
+      strings: ['WELCOME TO BAGJA COLLAGE TEST',
+      			'SPIRIT, YOU CAN DO IT',
+      			"DON'T EVER GIVE UP"],
+      typeSpeed: 70,
+      loop: true,
+      loopCount: Infinity,
+    });
+  </script>
 </body>
 </html>
